@@ -77,6 +77,8 @@
 
     
 <!-- header container -->
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 <header class="header-container">
 
   
@@ -114,11 +116,13 @@
 <div class="body-container float">
   <div class="content-container article-list">
     <div class="card-container card-articles">
-      <div class="card-wrap">
+      <div class="card-wrap" style="height: 100px;width: 100px;">
         
           
-          <div class="card-item">
+          <div class="card-item img">
             <article>
+              
+                <div class="card-cover" style="background-image: url(/images/tiger.png)"></div>
               
               
                 <a class="article-link card-link" href="/2020/06/20/hello-world/" itemprop="url"></a>
@@ -147,6 +151,7 @@
 <!-- page container -->
 
 
+<script src="/live2d-widget/autoload.js"></script>
 
     <!-- footer container -->
 <footer id="footer" class="footer">
@@ -191,11 +196,11 @@
         new APlayer({
           container: el,
           audio: { ...el.dataset },
-          theme: "#b7daff",
-          lrcType: 3,
-          autoplay: false,
-          loop: false,
-          mutex: true,
+          theme: "",
+          lrcType: ,
+          autoplay: ,
+          loop: ,
+          mutex: ,
         });
       });
     }
@@ -294,13 +299,14 @@ function initWaterfall(selector, el) {
   <!-- 尾部用户自定义相关内容 -->
 
 <link rel="stylesheet" href="APlayer.min.css">
-<div id="aplayer"></div>
+<div id="aplayer" style="width: 350px;"></div>
 <script src="APlayer.min.js"></script>
 <script>
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
-	fixed: true,
-	theme: '#e9e9e9',
+	listFolded: false,
+    listMaxHeight: 90,
+    lrcType: 3,
     audio: [
 	  {
             name: "アイロニ",
@@ -308,10 +314,45 @@ const ap = new APlayer({
 			url: "https://qiniu.miiiku.xyz/public/music/鹿乃 - アイロニ.mp3",
 			lrc: "https://qiniu.miiiku.xyz/public/music/鹿乃 - アイロニ.lrc",
 			cover: "https://qiniu.miiiku.xyz/public/music/鹿乃 - アイロニ.jpg"
-      }
-    ]
+      },
+	  {
+	        name: "心做し",
+			artist: "鹿乃",
+			url: "https://m8.music.126.net/20200622000255/9f05673a0cac65dc0423fa68ab05fc4f/ymusic/6a5d/4ec6/b47b/cd1b538b4a29aacd171c1dbdb78eb260.mp3",
+			lrc: "https://qiniu.miiiku.xyz/public/music/鹿乃 - アイロニ.lrc",
+			cover: "https://p1.music.126.net/w5-FU13Owl_VbKfybBwx3A==/2884019003563753.jpg"
+	  },
+	  {
+	        name: "Lemon",
+			artist: "米津玄师",
+			url: "https://m8.music.126.net/20200622001905/de80a7c32d3be5d64b14b488784a25e1/ymusic/6eed/4ef2/d8ae/b85b958a70552f7e002e33d35075086c.mp3",
+			lrc: "https://qiniu.miiiku.xyz/public/music/鹿乃 - アイロニ.lrc",
+			cover: "https://p2.music.126.net/6IeZ9MiSSDXifj74nzH6ww==/109951163561494000.jpg"
+	  },
+	  {
+	        name: "打上花火",
+			artist: "米津玄师",
+			url: " https://m7.music.126.net/20200622002936/36744cfd17e69cf4b40e0882ff2d9831/ymusic/e8c3/b990/01fc/19b373e3bfa86a6d0be3808ad706e244.mp3",
+			lrc: "https://qiniu.miiiku.xyz/public/music/鹿乃 - アイロニ.lrc",
+			cover: "https://p1.music.126.net/ZUCE_1Tl_hkbtamKmSNXEg==/109951163009282836.jpg"
+	  },
+	  {
+	        name: "生きていたんだよな",
+			artist: "あいみょん",
+			url: " https://m8.music.126.net/20200622003157/cdf2bb16a18a6509d1f2c3b148e6fd7c/ymusic/540c/0e0c/0252/cf228251c29fd8bcfbf758d9b26df2b1.mp3",
+			lrc: "https://qiniu.miiiku.xyz/public/music/鹿乃 - アイロニ.lrc",
+			cover: "https://p2.music.126.net/hpeHmirKQQyw3qWaD6XbzQ==/109951164349232307.jpg"
+	  },
+	  {
+	        name: "僕が死のうと思ったのは",
+			artist: "中島美嘉",
+			url: " https://m7.music.126.net/20200622003519/14dde2926d2ec1ee39a229f861c4f57c/ymusic/0e59/045a/055b/93a3571c63307294b78421b5429712de.mp3",
+			lrc: "https://qiniu.miiiku.xyz/public/music/鹿乃 - アイロニ.lrc",
+			cover: "https://p2.music.126.net/HE-K4mxyNGF84xlyuxx9Wg==/109951163825342747.jpg"
+	  }
+	   ]
 });
 </script>
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"superSample":2,"width":180,"height":400,"position":"left","hOffset":-10,"vOffset":130},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
